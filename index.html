@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Processor</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="tab-buttons">
+        <button onclick="openTab(event, 'processor')" id="defaultOpen">
+          Data Processor
+        </button>
+        <button onclick="openTab(event, 'excelFormatter')">
+          Excel Formatter
+        </button>
+      </div>
+      <div id="processor" class="tab active">
+        <h2>Data Processor</h2>
+        <label for="dataInput">Paste data here:</label>
+        <textarea id="dataInput" placeholder="Paste data here..."></textarea>
+        <h3>Output:</h3>
+        <textarea id="output" class="output" readonly></textarea>
+        <button onclick="copyToClipboard()">Copy Output</button>
+      </div>
+      <div id="excelFormatter" class="tab">
+        <h2>Excel Formatter</h2>
+        <p>Content not added yet</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
