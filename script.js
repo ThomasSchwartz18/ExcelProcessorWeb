@@ -12,6 +12,7 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
+// Function replaces spaces in pasted data with semicolons
 function processData() {
   var inputData = document.getElementById("dataInput").value.trim();
   var outputTextarea = document.getElementById("output");
@@ -22,6 +23,7 @@ function processData() {
   }
 }
 
+// Function Auto Processes pasted data
 function autoProcessData() {
   var inputData = document.getElementById("dataInput").value.trim();
   var outputTextarea = document.getElementById("output");
@@ -32,11 +34,17 @@ function autoProcessData() {
   }
 }
 
+// Function to copy output box
 function copyToClipboard() {
   var outputTextarea = document.getElementById("output");
   outputTextarea.select();
   document.execCommand("copy");
   alert("Copied to clipboard");
+}
+
+// Function clears data in the paste box
+function clearData() {
+  document.getElementById("dataInput").value = "";
 }
 
 // Open default tab
